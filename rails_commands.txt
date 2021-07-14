@@ -1,0 +1,31 @@
+after installation check in cmd for
+ruby, rails, gem, bundler
+
+rails new simpleblog
+-> change https to http in gemfile of the app
+bundle install -> will install all the dependencies, this file is similar to package.json file of nodejs
+               -> bundle install is similar to npm install
+rails server or rails s -> opens the app in port 3000
+			   
+#Create a controller Posts
+rails generate controller Posts
+
+#inside posts folder of views, create index.html.erb
+#change the route to home or root route inside routes.rb of config folder
+root 'posts#index'
+
+#reload the app at port 3000 to route to our index.html.erb of posts controller
+
+#to see details of our app
+rake about
+
+#to see all routes in the app
+rails routes # previously it was rake routes
+
+#to create a model Post
+rails g model Post title:string body:text 
+rails g model Comment title:string body:text post:references
+
+#to run the migration for model classes to create tables in db
+rake db:migrate
+

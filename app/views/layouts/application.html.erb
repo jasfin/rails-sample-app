@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Simpleblog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <%= stylesheet_link_tag 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' %>
+
+  </head>
+
+  <body>
+
+  <nav class="navbar navbar-expand-sm navbar-light bg-light">
+  <div class="container">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+
+    <div class = "navbar-header">
+        <a class="nav-link" href="#">Simpleblog </a>
+    </div>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="nav navbar-nav">
+      <li>
+        <%= link_to "Home", home_path %>
+      </li>
+    </ul>
+        
+    <ul class="nav navbar-nav navbar-right">
+      <li>
+        <%= link_to "Create Post", new_post_path %>
+      </li>
+    </ul>
+
+  </div>
+ </div>
+</nav>
+
+  <div class="container">
+    
+    <%= yield %>
+
+  </div>
+
+  </body>
+</html>
+
